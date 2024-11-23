@@ -60,6 +60,12 @@ textarea {
   padding: 0.5rem 0;
 }
 
+.form-btn:hover {
+  background-color: #ffd000;
+  font-weight: 500;
+  color: var(--brown-header);
+}
+
 .input-error {
   border: 1px solid red;
 }

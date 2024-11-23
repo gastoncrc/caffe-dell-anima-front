@@ -37,6 +37,12 @@
   padding: 0.5rem 0;
 }
 
+.login-form-btn:hover {
+  background-color: #ffd000;
+  font-weight: 500;
+  color: var(--brown-header);
+}
+
 .login-input-error {
   border: 1px solid red;
 }
@@ -45,6 +51,23 @@
   color: red;
   font-size: 12px;
   margin-top: 4px;
+}
+
+.redirect-register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.redirect-register-container h3 {
+  font-size: 14px;
+}
+.redirect-register-container p {
+  font-size: 16px;
+}
+
+.redirect-register-container p:hover {
+  color: #4b2514e3;
 }
 
 /* ----------------------------MEDIAQUERIES------------------ */

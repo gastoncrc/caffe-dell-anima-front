@@ -1,12 +1,42 @@
 .navbar-menu {
   display: flex;
   gap: 2rem;
-  font-weight: 600;
-  color: white;
   align-items: center;
   justify-content: center;
 }
 
+.features-item {
+  font-weight: 500;
+  color: white;
+}
+
+.features-item:hover {
+  color: #ffd000;
+}
+.about-item {
+  font-weight: 500;
+  color: white;
+}
+
+.about-item:hover {
+  color: #ffd000;
+}
+.products-item {
+  font-weight: 500;
+  color: white;
+}
+
+.products-item:hover {
+  color: #ffd000;
+}
+.contact-item {
+  font-weight: 500;
+  color: white;
+}
+
+.contact-item:hover {
+  color: #ffd000;
+}
 /* ----------------------------MEDIAQUERIES------------------ */
 @media (max-width: 992px) {
 }

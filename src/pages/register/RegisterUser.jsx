@@ -17,10 +17,11 @@ function RegisterUser() {
     email: Yup.string()
       .email("El email no es válido")
       .required("el email es obligatorio"),
-    message: Yup.string()
+    password: Yup.string()
       .trim()
       .max(300, "Se permiten solo 300 caracteres")
       .required("No puede enviar un mensaje vacío"),
+    // repeatpassword
   });
 
   const formik = useFormik({
@@ -37,27 +38,33 @@ function RegisterUser() {
       }),
   });
   return (
-    <div className="form-container">
-      <h2 className="contact-title">Crear Usuario</h2>
+    <div className="form-register-container">
+      <h2 className="contact-register-title">Crear Usuario</h2>
       <hr className="hr" />
-      <form action="#" className="form-contact" onSubmit={formik.handleSubmit}>
-        <div className="form-name">
+      <form
+        action="#"
+        className="form-register-contact"
+        onSubmit={formik.handleSubmit}
+      >
+        <div className="form-register-name">
           <label htmlFor="name">Nombre</label>
           <input
             type="text"
             id="name"
             placeholder="Nombre"
             className={
-              formik.touched.name && formik.errors.name ? "input-error" : ""
+              formik.touched.name && formik.errors.name
+                ? "register-input-error"
+                : ""
             }
             {...formik.getFieldProps("name")}
           />
           {formik.touched.name && formik.errors.name && (
-            <p className="error-text">{formik.errors.name}</p>
+            <p className="register-error-text">{formik.errors.name}</p>
           )}
         </div>
 
-        <div className="form-surname">
+        <div className="form-register-surname">
           <label htmlFor="surname">Apellido</label>
           <input
             type="text"
@@ -65,33 +72,35 @@ function RegisterUser() {
             placeholder="Apellido"
             className={
               formik.touched.surname && formik.errors.surname
-                ? "input-error"
+                ? "register-input-error"
                 : ""
             }
             {...formik.getFieldProps("surname")}
           />
           {formik.touched.surname && formik.errors.surname && (
-            <p className="error-text">{formik.errors.surname}</p>
+            <p className="register-error-text">{formik.errors.surname}</p>
           )}
         </div>
 
-        <div className="form-email">
+        <div className="form-register-email">
           <label htmlFor="email">Correo Electrónico</label>
           <input
             type="email"
             id="email"
             placeholder="Correo Electrónico"
             className={
-              formik.touched.email && formik.errors.email ? "input-error" : ""
+              formik.touched.email && formik.errors.email
+                ? "register-input-error"
+                : ""
             }
             {...formik.getFieldProps("email")}
           />
           {formik.touched.email && formik.errors.email && (
-            <p className="error-text">{formik.errors.email}</p>
+            <p className="register-error-text">{formik.errors.email}</p>
           )}
         </div>
 
-        <div className="form-login-password">
+        <div className="form-register-password">
           <label htmlFor="password">Constraseña</label>
           <input
             type="password"
@@ -99,39 +108,41 @@ function RegisterUser() {
             placeholder="Contraseña"
             className={
               formik.touched.password && formik.errors.password
-                ? "login-input-error"
+                ? "register-input-error"
                 : ""
             }
             {...formik.getFieldProps("password")}
           />
           {formik.touched.password && formik.errors.password && (
-            <p className="login-error-text">{formik.errors.password}</p>
+            <p className="register-error-text">{formik.errors.password}</p>
           )}
         </div>
-        <div className="form-login-password">
+        <div className="form-register-password">
           <label htmlFor="password">Repetir Constraseña</label>
           <input
             type="password"
-            id="password"
+            id="rePassword"
             placeholder="Repetir Contraseña"
             className={
-              formik.touched.password && formik.errors.password
-                ? "login-input-error"
+              formik.touched.rePassword && formik.errors.rePassword
+                ? "register-input-error"
                 : ""
             }
-            {...formik.getFieldProps("password")}
+            {...formik.getFieldProps("re-password")}
           />
-          {formik.touched.password && formik.errors.password && (
-            <p className="login-error-text">{formik.errors.password}</p>
+          {formik.touched.rePassword && formik.errors.rePassword && (
+            <p className="register-error-text">{formik.errors.rePassword}</p>
           )}
         </div>
-        <button type="subnmit" className="form-btn">
+        <button type="submit" className="form-register-btn">
           Crear Usuario
         </button>
       </form>
-      <div>
-        <p>¿Ya tienes cuenta?</p>
-        <Link to="/login">Iniciar Sesión</Link>
+      <div className="redirect-login-container">
+        <h3>¿Ya tienes cuenta?</h3>
+        <Link to="/login">
+          <p>Iniciar Sesión</p>
+        </Link>
       </div>
     </div>
   );

@@ -76,9 +76,11 @@ function Login() {
           Iniciar Sesión
         </button>
       </form>
-      <div>
-        <p>¿Aún no eres un usuario registrado?</p>
-        <Link to="/register">Crear Usuario</Link>
+      <div className="redirect-register-container">
+        <h3>¿Aun no eres usuario registrado?</h3>
+        <Link to="/register">
+          <p>Crear Usuario</p>
+        </Link>
       </div>
     </div>
   );
