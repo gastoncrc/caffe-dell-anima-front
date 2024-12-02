@@ -4,10 +4,7 @@ const URL = import.meta.env.VITE_REACT_APP_URL;
 
 export const createUser = async (userValues) => {
   try {
-    const res = await axios.post(
-      `https://caffe-dell-anima-back.vercel.app/users/register-user`,
-      userValues
-    );
+    const res = await axios.post(`${URL}/users/register-user`, userValues);
     const token = res.data.token;
     sessionStorage.setItem("token", token);
   } catch (error) {
@@ -17,10 +14,7 @@ export const createUser = async (userValues) => {
 
 export const userLogin = async (userData) => {
   try {
-    const res = await axios.post(
-      `https://caffe-dell-anima-back.vercel.app/users/login`,
-      userData
-    );
+    const res = await axios.post(`${URL}/users/login`, userData);
     const { token, name } = res.data;
     sessionStorage.setItem("name", name);
     sessionStorage.setItem("token", token);
@@ -33,10 +27,7 @@ export const userLogin = async (userData) => {
 
 export const userLogout = async (userData) => {
   try {
-    const res = await axios.post(
-      `https://caffe-dell-anima-back.vercel.app/users/logout`,
-      userData
-    );
+    const res = await axios.post(`${URL}/users/logout`, userData);
     const { token, name } = res.data;
 
     sessionStorage.setItem("token", token);
