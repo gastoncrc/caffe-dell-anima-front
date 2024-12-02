@@ -5,7 +5,7 @@ console.log(URL);
 export const fetchAllProducts = async () => {
   try {
     const res = await axios.get(
-      `http://caffe-dell-anima-back.vercel.app/products`
+      `https://caffe-dell-anima-back.vercel.app/products`
     );
     return res.data;
   } catch (error) {
@@ -17,7 +17,7 @@ export const fetchAllProducts = async () => {
 export const fetchFeatureProducts = async () => {
   try {
     const res = await axios.get(
-      `http://caffe-dell-anima-back.vercel.app/products/feature-product`
+      `https://caffe-dell-anima-back.vercel.app/products/feature-product`
     );
     return res.data.products;
   } catch (error) {
