@@ -1,0 +1,90 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1rem 2rem 1rem;
+  gap: 2rem;
+}
+.contact-title {
+  font-size: 25px;
+  color: #5c392a;
+  font-size: 2rem;
+}
+
+.form-contact {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  gap: 1rem;
+}
+
+.form-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-surname {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-email {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-message {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  border-radius: 10px;
+  border: 0;
+  height: 30px;
+}
+
+textarea {
+  border-radius: 10px;
+  border: 0;
+  height: 100px;
+}
+
+.form-btn {
+  border-radius: 10px;
+  background-color: var(--brown-header);
+  color: white;
+  border: 1px;
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+
+.form-btn:hover {
+  background-color: #ffd000;
+  font-weight: 500;
+  color: var(--brown-header);
+}
+
+.input-error {
+  border: 1px solid red;
+}
+
+.error-text {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+input,
+textarea {
+  padding: 5px;
+}
+
+/* ----------------------------MEDIAQUERIES------------------ */
+
+@media (max-width: 768px) {
+  .form-contact {
+    width: 300px;
+  }
+}

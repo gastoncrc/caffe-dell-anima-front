@@ -1,0 +1,79 @@
+.form-login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1rem 2rem 1rem;
+  gap: 2rem;
+}
+.contact-login-title {
+  font-size: 25px;
+  color: #5c392a;
+  font-size: 2rem;
+}
+
+.form-login-contact {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  gap: 1rem;
+}
+
+.form-login-email {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-login-password {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form-btn {
+  border-radius: 10px;
+  background-color: var(--brown-header);
+  color: white;
+  border: 1px;
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+
+.login-form-btn:hover {
+  background-color: #ffd000;
+  font-weight: 500;
+  color: var(--brown-header);
+}
+
+.login-input-error {
+  border: 1px solid red;
+}
+
+.login-error-text {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.redirect-register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.redirect-register-container h3 {
+  font-size: 14px;
+}
+.redirect-register-container p {
+  font-size: 16px;
+}
+
+.redirect-register-container p:hover {
+  color: #4b2514e3;
+}
+
+/* ----------------------------MEDIAQUERIES------------------ */
+
+@media (max-width: 768px) {
+  .login-form-contact {
+    width: 300px;
+  }
+}

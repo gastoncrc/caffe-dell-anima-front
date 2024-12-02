@@ -1,0 +1,17 @@
+.filters-container {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filters-search-input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.filters-additional-options {
+  display: flex;
+  gap: 1rem;
+}
