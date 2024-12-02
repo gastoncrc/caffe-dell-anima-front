@@ -33,7 +33,10 @@ export const userLogin = async (userData) => {
 
 export const userLogout = async (userData) => {
   try {
-    const res = await axios.post(`${URL}/users/logout`, userData);
+    const res = await axios.post(
+      `http://caffe-dell-anima-back.vercel.app/users/logout`,
+      userData
+    );
     const { token, name } = res.data;
 
     sessionStorage.setItem("token", token);
